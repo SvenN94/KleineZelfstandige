@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KleineZelfstandige.Views.LoginView"
+             xmlns:models="clr-namespace:KleineZelfstandige.Models"
+             xmlns:viewmodel="clr-namespace:KleineZelfstandige.ViewModel"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="LoginView"
+             x:DataType="viewmodel:LoginViewModel"
+             FlyoutItem.IsVisible="False"
+             Shell.FlyoutBehavior="Disabled">
+    <Grid>
+        <StackLayout Margin="20">
+            <Image Source="logo.png" HeightRequest="50"  HorizontalOptions="StartAndExpand"/>
+
+            <StackLayout Margin="0,80">
+                <Label FontSize="32" Text="Welcome Back"/>
+                <Label FontSize="16" Text="Sign in to continue"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label  
+                       FontSize="16" Text="Username"/>
+                <Grid Margin="0,5">
+                    <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                    <Entry BackgroundColor="Transparent" Placeholder="Enter username" 
+                           Margin="5,0"
+                           PlaceholderColor="Gray" 
+                           Text="{Binding Username}"/>
+
+                </Grid>
+
+                <Label  
+                       FontSize="16" Text="Password"/>
+                <Grid Margin="0,5">
+                    <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                    <Entry BackgroundColor="Transparent" Placeholder="Enter password" 
+                            Margin="5,0"
+                           PlaceholderColor="Gray" IsPassword="True"
+                           Text="{Binding Password}"/>
+
+                </Grid>
+            </StackLayout>
+
+            <Button Margin="0,15" Text="Log in" 
+                    Command="{Binding LoginAsyncCommand}"/>
+
+            <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
+
+                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource SecondaryColor}" 
+                       FontSize="16" Text="Forgot Password?" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" 
+                       />
+                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource SecondaryColor}" 
+                       FontSize="16" Text="Register"  VerticalOptions="EndAndExpand" 
+                       HorizontalOptions="EndAndExpand"                     
+                       >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding RegisterAsyncCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

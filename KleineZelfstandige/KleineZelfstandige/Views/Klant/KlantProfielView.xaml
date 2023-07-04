@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KleineZelfstandige.Views.Klant.KlantProfielView"
+             xmlns:models="clr-namespace:KleineZelfstandige.Models"
+             xmlns:viewmodel="clr-namespace:KleineZelfstandige.ViewModel"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="KlantView"
+             x:DataType="viewmodel:KlantProfielViewModel">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Entry Text="{Binding Klant.BedrijfNaam}" Grid.Row="1" Grid.Column="1" Placeholder="Bedrijfnaam"/>
+
+        <Label Text="Naam" Grid.Row="2" Grid.Column="0" Margin="10,0,0,0" />
+        <Entry Text="{Binding Klant.Achternaam}" Grid.Row="2" Grid.Column="3" Placeholder="Achternaam"/>
+        <Entry Text="{Binding Klant.Voornaam}" Grid.Row="2" Grid.Column="2" Placeholder="Voornaam"/>
+        <Label Text="Adres" Grid.Row="3" Grid.Column="0" Margin="10,0,0,0" />
+        <Entry Text="{Binding Klant.Gemeente}" Grid.Row="3" Grid.Column="2" Placeholder="Gemeente"/>
+        <Entry Text="{Binding Klant.Straat}" Grid.Row="3" Grid.Column="3" Placeholder="Straat"/>
+        <Entry Text="{Binding Klant.Huisnummer}" Grid.Row="3" Grid.Column="4" Placeholder="Huisnmr"/>
+        <Label Text="Gegevens" Grid.Row="4" Grid.Column="0" Margin="10,0,0,0"/>
+        <Entry Text="{Binding Klant.Email}" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Placeholder="Email"/>
+        <Entry Text="{Binding Klant.Telefoon}" Grid.Row="4" Grid.Column="2" Placeholder="Telefoon"/>
+
+        <Button Text="Add" Grid.Row="6" Grid.Column="1"
+                    Command="{Binding SaveKlantCommand}"/>
+        <Button Text="Delete" Grid.Row="6" Grid.Column="3"
+                    Command="{Binding DeleteKlantCommand}"/>           
+       
+    </Grid>
+</ContentPage>

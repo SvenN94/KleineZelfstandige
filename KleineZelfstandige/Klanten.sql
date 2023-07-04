@@ -1,0 +1,10 @@
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('vestibulum', 'Stokell', 'Josy', 'Norway Maple', '18', 'Way', '2559473230', 'jstokell0@about.com');
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('nunc', 'Sweetman', 'Magdalen', 'Warrior', '768', 'Trail', '6665570357', 'msweetman1@reverbnation.com');
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('ut', 'Bannon', 'Ellynn', 'Cambridge', '19', 'Alley', '8286765372', 'ebannon2@tiny.cc');
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('nunc', 'Flaune', 'Jodee', 'Mariners Cove', '119', 'Lane', '5419122411', 'jflaune3@whitehouse.gov');
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('posuere', 'De Hoogh', 'Mallorie', 'Packers', '861', 'Point', '4646468946', 'mdehoogh4@hc360.com');
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('ut', 'Henkens', 'Cyril', 'Troy', '955', 'Junction', '8573399439', 'chenkens5@amazon.co.uk');
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('elit', 'Kirimaa', 'Clarabelle', 'Hollow Ridge', '750', 'Center', '2192405120', 'ckirimaa6@liveinternet.ru');
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('arcu', 'Leinthall', 'Oswald', 'Texas', '179', 'Crossing', '5651427496', 'oleinthall7@hatena.ne.jp');
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('dapibus', 'Bulstrode', 'Nobe', 'Granby', '329', 'Hill', '4136636158', 'nbulstrode8@so-net.ne.jp');
+insert into Klanten (BedrijfNaam, Achternaam, Voornaam, Straat, Huisnummer, Gemeente, Telefoon, Email) values ('ac', 'Dalgardno', 'Caroljean', 'Independence', '47847', 'Avenue', '9238111254', 'cdalgardno9@noaa.gov');

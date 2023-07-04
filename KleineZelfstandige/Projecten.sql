@@ -1,0 +1,10 @@
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (12, 7, 19, '9 Park Meadow Way', '2022-05-05 17:46:58');
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (9, 10, 4, '9 Farwell Crossing', '2022-07-02 17:56:00');
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (7, 10, 4, '322 Spenser Center', '2022-10-23 15:11:56');
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (2, 6, 13, '4 Canary Trail', '2022-04-19 05:15:49');
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (10, 1, 8, '768 Ludington Lane', '2022-10-30 02:47:48');
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (6, 2, 9, '0 Amoth Parkway', '2022-02-21 01:37:45');
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (4, 4, 4, '4 Burrows Hill', '2022-07-10 20:36:42');
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (11, 3, 16, '2391 Rockefeller Center', '2022-12-20 02:47:59');
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (7, 5, 20, '80 Pennsylvania Lane', '2022-06-12 12:42:38');
+insert into Projecten (KlantId, ActiviteitId, DoodleId, Locatie, EindDatum) values (6, 3, 19, '0527 Arizona Pass', '2022-12-18 07:35:33');

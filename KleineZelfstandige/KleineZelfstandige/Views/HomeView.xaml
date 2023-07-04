@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KleineZelfstandige.Views.HomeView"
+             xmlns:models="clr-namespace:KleineZelfstandige.Models"
+             xmlns:viewmodel="clr-namespace:KleineZelfstandige.ViewModel"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="HomeView"
+             x:DataType="viewmodel:HomeViewViewModel"
+             NavigationPage.HasBackButton="false"  >
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior
+            EventName="Appearing"
+            Command="{Binding LoadCommand}"
+            />
+    </ContentPage.Behaviors>
+    <VerticalStackLayout Padding="5"
+                        >
+        <Label Text="Klanten"/>
+        <CollectionView             
+            x:Name="clvKlanten"
+            Margin="5"
+            ItemsSource="{Binding klants}"
+            MaximumHeightRequest="330"            
+            >
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Klant"                              >
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewViewModel}}, Path=GoToDetailKlantCommand}"
+                                CommandParameter="{Binding .}"/>
+                        </Frame.GestureRecognizers>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding BedrijfNaam}" HorizontalOptions="Start"
+                                   Grid.Column="0"/>
+                            <Label Text="{Binding Voornaam}" TextColor="Black"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                                   Grid.Column="1"
+                                   />
+                            <Label Text="{Binding Achternaam}"
+                                   Grid.Column="2"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Label Text="Doodles"/>
+        <CollectionView
+        ItemsSource="{Binding doodles}"
+        Margin="5"
+            MaximumHeightRequest="330"            
+            >
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Doodle">
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewViewModel}}, Path=GoToDetailDoodleCommand}"
+                                CommandParameter="{Binding .}"/>
+                        </Frame.GestureRecognizers>
+                        <HorizontalStackLayout>
+                            <Label Text="{Binding DoodleId}"/>
+                            <Label Text="{Binding Created}"/>
+                            <Label Text="{Binding Tekst}"/>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>

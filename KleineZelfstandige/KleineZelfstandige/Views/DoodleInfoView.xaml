@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KleineZelfstandige.Views.DoodleInfoView"             
+             xmlns:models="clr-namespace:KleineZelfstandige.Models"
+             xmlns:viewmodel="clr-namespace:KleineZelfstandige.ViewModel"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="DoodleInfoView"
+             x:DataType="viewmodel:DoodleInfoViewModel">
+    <VerticalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,50,0,0">
+            <Label Text="{Binding Doodle.Tekst}" HeightRequest="200" BackgroundColor="LightGrey" MaximumWidthRequest="300"/>
+            <Label Text="{Binding Doodle.Created}"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

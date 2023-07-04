@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="KleineZelfstandige.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:KleineZelfstandige"
+    xmlns:views="clr-namespace:KleineZelfstandige.Views"
+    xmlns:klviews="clr-namespace:KleineZelfstandige.Views.Klant"
+    xmlns:menu="clr-namespace:KleineZelfstandige.Views.Menu"
+    >
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate views:LoginView}"
+        Route="Login"
+        FlyoutItemIsVisible="False" />
+    
+        <ShellContent Title="Home"
+                      ContentTemplate="{DataTemplate views:HomeView}"
+                      Route="Home"/>
+        <ShellContent Title="Klanten Lijst"
+                      ContentTemplate="{DataTemplate klviews:KlantenLijstView}"
+                      Route="Klanten"/>
+        <ShellContent Title="Doodle"
+                      ContentTemplate="{DataTemplate views:DoodleView}"
+                      Route="Doodles"/>
+        <ShellContent Title="Settings"
+                      ContentTemplate="{DataTemplate menu:SettingsView}"
+                      Route="Settings"/>
+    
+</Shell>
